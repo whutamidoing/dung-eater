@@ -1,0 +1,93 @@
+@font-face {
+    font-family: agnema-bold;
+    src: url(../fonts/agmena/Agmena\ Pro\ Bold.ttf);
+}
+@font-face {
+    font-family: agnema;
+    src: url(../fonts/agmena/Agmena\ Pro\ Regular.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #202020;
+}
+.front-ahead {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(../images/Elden-Lord/Elden-Ring.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+.logo {
+    width: 50vw;
+    height: 17vw;
+}
+.seek-menu {
+    display: flex;
+    flex-direction: column;
+    
+    width: 100vw;
+    height: fit-content;
+}
+.try-button {
+    display: block;
+    position: relative;
+    text-decoration: none;
+
+    padding: 2vw;
+    padding-left: 2vw;
+    border-top: 1px solid #cca660;
+
+    color: #AB966F;
+    font-family: agmena;
+    font-size: 5vw;
+
+    background-color: #20202090;
+}
+.try-button:last-child {
+    border-bottom: 1px solid #cca660;
+}
+.try-button:before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+
+    background: linear-gradient(
+        to right, transparent, 
+        #e4bb6f
+    );
+}
+.try-button:hover:before {
+    width: 100%;
+    transition: 600ms;
+}
+@media (max-device-width:1000px) {
+    .front-ahead {
+        background-size: 400% 100%;
+        background-position: -195vw;
+    }
+    .logo-container {
+        margin-top: 10vw;
+        margin-bottom: 10vw;
+    }
+    .logo {
+        width: 100vw;
+        height: 30vw;
+    }
+    .try-button {
+        padding: 4vw;
+        font-size: 10vw;
+    }
+}
